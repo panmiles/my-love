@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+  
+<div id="welcomePopup" class="welcome-popup">
+  
+<div class="welcome-box">
+  <div class="welcome-heart">💗</div>
+  <h2>ยินดีต้อนรับนะที่รัก</h2>
+
+  <p id="typingMessage"></p>
+
+  <button onclick="closeWelcome()">
+    เข้าสู่เว็บไซต์ 💕
+  </button>
+</div>
+
+</div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Love 💗</title>
+
+  <!-- เชื่อมต่อ CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- เชื่อมต่อ JavaScript -->
+  <script src="script.js" defer></script>
+
+</head>
+  
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<main class="container">
+
+  <div class="heart">💗</div>
+
+  <h1>Welcome My Love</h1>
+  <p class="subtitle">
+    ยินดีต้อนรับเข้าสู่โลกใบเล็ก ๆ ของเราสองคน
+  </p>
+
+  <div class="love-card">
+    <h2>ถึงคนพิเศษของเค้า 💌</h2>
+    <p>
+      ขอบคุณที่เข้ามาเป็นความสุขในทุก ๆ วันนะ
+      อยากให้เธอยิ้มเยอะ ๆ และอยู่ด้วยกันไปนาน ๆ
+    </p>
+    <p class="love">รักที่รักที่สุดเลย ❤️</p>
+  </div>
+
+  <button onclick="showLove()">
+    กดรับความรัก 💝
+  </button>
+
+  <p id="message"></p>
+
+  
+
+<div class="music-card">
+
+  <div class="music-icon">🎧💗</div>
+
+  <h2>Our Love Song</h2>
+
+  <p>เพลงรักของเราสองคน</p>
+
+  <p class="music-caption">
+    ให้เสียงเพลงนี้อยู่ข้าง ๆ ที่รักเสมอนะ
+  </p>
+
+  <div class="youtube-player">
+    <iframe
+      src="https://www.youtube.com/embed/cAMYFCV-Fgk?autoplay=1&mute=1&controls=1&playsinline=1&loop=1&playlist=cAMYFCV-Fgk"
+      title="Our Love Song"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <p class="music-note">
+    💗 เพลงเริ่มเล่นอัตโนมัติแล้ว
+    <br>
+    แตะปุ่มเสียงในเครื่องเล่นเพื่อเปิดเสียงเพลง
+  </p>
+
+</div>
+
+
+  <div class="anniversary-card">
+    <div class="small-heart">💕</div>
+    <h2>Our Love Story</h2>
+    <p>เรารักกันมาแล้ว</p>
+    <div id="loveDays">กำลังคำนวณ...</div>
+    <p>วันที่มีเธออยู่ข้าง ๆ 💗</p>
+    <p class="start-date">เริ่มต้น 19 เมษายน 2026</p>
+  </div>
+
+  <div class="letter-card">
+    <h2>มีจดหมายถึงที่รัก 💌</h2>
+    <div class="envelope" onclick="openLetter()">💌</div>
+    <p>ลองกดที่ซองจดหมายดูสิ</p>
+
+    <div id="letterMessage" class="letter-message">
+      ที่รักรู้ไหม... 💗
+
+      <br><br>
+      ตั้งแต่วันที่ 19 เมษายน 2026
+      โลกของเค้าก็มีความสุขมากขึ้น
+
+      <br><br>
+      ขอบคุณที่เข้ามาเป็นรอยยิ้ม
+      เป็นความสบายใจ และเป็นคนพิเศษของเค้า
+
+      <br><br>
+      ไม่ว่าจะผ่านไปกี่วัน
+      เค้าก็ยังอยากมีที่รักอยู่ในทุก ๆ วันนะ
+
+      <br><br>
+      รักที่รักที่สุดเลย ❤️
+    </div>
+  </div>
+
+  <p class="footer">
+    Made with love for you 💗
+  </p>
+
+<section class="letter-card">
+  <h2>💌 จดหมายถึงที่รัก</h2>
+  <p>มีข้อความเล็ก ๆ ที่อยากบอกเธอ...</p>
+
+  <div class="envelope" id="loveEnvelope">
+    <div class="envelope-back"></div>
+    <div class="letter-paper" id="loveLetter">
+      <h3>ถึงคนพิเศษของเค้า 💗</h3>
+      <p>
+        ขอบคุณที่เข้ามาเป็นส่วนหนึ่งในชีวิตนะ<br>
+        ทุกวันที่มีเธอ ทำให้โลกของเค้าน่ารักขึ้น<br>
+        ไม่ว่าจะเจออะไร เค้าก็อยากมีเธออยู่ข้าง ๆ<br>
+        รักเธอนะ ที่รัก ❤️
+      </p>
+      <p class="letter-sign">จากคนที่รักเธอที่สุด 💕</p>
+    </div>
+    <div class="envelope-flap"></div>
+  </div>
+
+  <button id="openLoveLetter" onclick="toggleLoveLetter()">
+    เปิดจดหมาย 💌
+  </button>
+</section>
+
+<section class="love-game">
+  <h2>💕 มีคำถามอยากถามที่รัก</h2>
+  <h3>รักเค้าไหมเอ่ย? 🥺</h3>
+
+  <div class="game-buttons">
+    <button class="yes-button" onclick="loveAccepted()">
+      ❤️ รักสิ
+    </button>
+
+    <button class="no-button" id="noButton"
+      onmouseover="moveNoButton()"
+      onclick="moveNoButton()">
+      🙈 ไม่รัก
+    </button>
+  </div>
+
+  <div id="gameResult"></div>
+</section>
+
+<section class="gift-section">
+  <h2>🎁 ของขวัญสำหรับที่รัก</h2>
+  <p>มีอะไรบางอย่างอยากมอบให้เธอ...</p>
+
+  <div class="gift-container" id="giftContainer"
+       onclick="openGift()">
+
+    <div class="gift-lid" id="giftLid">
+      <div class="gift-lid-ribbon"></div>
+    </div>
+
+    <div class="gift-box">
+      <div class="gift-ribbon"></div>
+      <div class="gift-bow">🎀</div>
+    </div>
+  </div>
+
+  <p id="giftHint">แตะกล่องของขวัญเพื่อเปิดนะ 💗</p>
+
+  <div id="giftMessage" class="gift-message">
+    <h3>💖 ถึงคนพิเศษของเค้า</h3>
+    <p>
+      ของขวัญชิ้นนี้อาจไม่ได้มีราคาแพง<br>
+      แต่เค้าตั้งใจมอบให้เธอด้วยหัวใจทั้งหมดเลยนะ<br>
+      ขอบคุณที่อยู่ด้วยกันนะที่รัก<br>
+      ขอให้เราได้สร้างความทรงจำดี ๆ ไปด้วยกันนาน ๆ ❤️
+    </p>
+    <div class="gift-big-heart">💗</div>
+  </div>
+</section>
+
+
+<section class="album-section">
+  <h2>📸 อัลบั้มความทรงจำของเรา</h2>
+  <p>ทุกภาพมีเรื่องราว และทุกเรื่องราวมีเธอ 💗</p>
+
+  <div class="album-grid">
+
+    <!-- รูปที่ 1 -->
+    <div class="album-item"
+      onclick="openMemoryPhoto(this.querySelector('img').src, 'วันแรก ๆ ที่เราได้อยู่ด้วยกัน 💕')">
+      <img src="https://drive.google.com/thumbnail?id=1IoJFDF9Faqy5QSiq09dlLNOBLJnqPFM0&sz=w1000">
+      <p>ความทรงจำที่ 1 💗</p>
+    </div>
+
+    <!-- รูปที่ 2 -->
+    <div class="album-item"
+      onclick="openMemoryPhoto(this.querySelector('img').src, 'รอยยิ้มของเธอคือความสุขของเค้า 🥰')">
+      <img src="https://drive.google.com/thumbnail?id=1MYPl7-CRYJM8oCQYiqCH_zcQp-gw88bh&sz=w1000">
+      <p>ความทรงจำที่ 2 💗</p>
+    </div>
+
+    <!-- รูปที่ 3 -->
+    <div class="album-item"
+      onclick="openMemoryPhoto(this.querySelector('img').src, 'อยากเก็บช่วงเวลาแบบนี้ไว้นาน ๆ ❤️')">
+      <img src="https://drive.google.com/thumbnail?id=1buOEwvTFZQx1l9r1RdfsWgLuJvBw6CXh&sz=w1000">
+      <p>ความทรงจำที่ 3 💗</p>
+    </div>
+
+    <!-- รูปที่ 4 -->
+    <div class="album-item"
+      onclick="openMemoryPhoto(this.querySelector('img').src, 'อีกหนึ่งความทรงจำที่เค้ารัก 💗')">
+      <img src="https://drive.google.com/thumbnail?id=1vxoma5jGaFnEjSpRxbzrN6f9SsDotN87&sz=w1000">
+      <p>ความทรงจำที่ 4 💗</p>
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+
+<div id="memoryModal" class="memory-modal"
+     onclick="closeMemoryPhoto()">
+
+  <span class="memory-close"
+        onclick="closeMemoryPhoto()">&times;</span>
+
+  <button class="photo-nav prev"
+          onclick="event.stopPropagation(); changeMemoryPhoto(-1)">
+    ❮
+  </button>
+
+  <img id="memoryFullImage">
+
+  <button class="photo-nav next"
+          onclick="event.stopPropagation(); changeMemoryPhoto(1)">
+    ❯
+  </button>
+
+  <p id="memoryCaption"></p>
+</div>
+
+
+</main>
