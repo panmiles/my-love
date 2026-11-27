@@ -1,0 +1,875 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: linear-gradient(
+    135deg, #ffe1ec, #fff0f5, #fce4ff
+  );
+  color: #a84670;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.heart {
+  font-size: 75px;
+  animation: beat 1s infinite;
+}
+
+h1 {
+  color: #e75b91;
+  font-size: 34px;
+}
+
+.subtitle {
+  color: #b66c8b;
+  line-height: 1.8;
+}
+
+.love-card,
+.music-card,
+.anniversary-card,
+.letter-card {
+  background: rgba(255,255,255,0.88);
+  padding: 25px 20px;
+  margin: 22px 0;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #e9a9c455;
+  line-height: 1.9;
+}
+
+.love {
+  color: #ec4e8b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  background: #f27ba7;
+  color: white;
+  padding: 14px 25px;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #d88ba866;
+}
+
+button:hover {
+  background: #e75b91;
+  transform: scale(1.05);
+}
+
+#message {
+  color: #e75b91;
+  font-weight: bold;
+  min-height: 25px;
+}
+
+#loveDays {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ed6599;
+  margin: 15px 0;
+}
+
+.small-heart {
+  font-size: 35px;
+}
+
+.start-date {
+  font-size: 12px;
+  color: #b77c94;
+}
+
+.envelope {
+  font-size: 75px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.envelope:hover {
+  transform: scale(1.15) rotate(-8deg);
+}
+
+.letter-message {
+  display: none;
+  background: #fff0f6;
+  padding: 20px;
+  border-radius: 18px;
+  color: #a84670;
+  line-height: 2;
+  margin-top: 20px;
+  text-align: left;
+  animation: appear 0.7s ease;
+}
+
+.letter-message.show {
+  display: block;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  animation: floatUp 5s linear forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer {
+  color: #d77da1;
+  padding: 20px;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* รองรับโทรศัพท์ */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 94%;
+    padding: 20px 5px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .heart {
+    font-size: 65px;
+  }
+
+  .love-card,
+  .music-card,
+  .anniversary-card,
+  .letter-card {
+    padding: 20px 15px;
+  }
+
+  #loveDays {
+    font-size: 36px;
+  }
+
+  button {
+    width: 85%;
+    max-width: 280px;
+  }
+}
+
+/* Our Love Song */
+
+.music-card {
+  background: linear-gradient(
+    135deg,
+    #fff0f6,
+    #ffe0ec,
+    #fce4ff
+  );
+  border: 2px solid #ffd0e1;
+  border-radius: 25px;
+  padding: 25px 15px;
+  box-shadow: 0 8px 25px #e9a9c455;
+}
+
+.music-icon {
+  font-size: 45px;
+  animation: beat 1.5s infinite;
+}
+
+.music-caption {
+  font-size: 13px;
+  color: #b66c8b;
+}
+
+.youtube-player {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px #d88ba855;
+}
+
+.youtube-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.music-note {
+  font-size: 13px;
+  color: #e75b91;
+}
+
+@media (max-width: 600px) {
+  .youtube-player {
+    width: 100%;
+  }
+}
+
+.music-card {
+  background: linear-gradient(
+    135deg,
+    #fff0f6,
+    #ffe0ec,
+    #fce4ff
+  );
+  border: 2px solid #ffd0e1;
+  border-radius: 25px;
+  padding: 25px 15px;
+  box-shadow: 0 8px 25px #e9a9c455;
+  text-align: center;
+}
+
+.music-icon {
+  font-size: 45px;
+  animation: beat 1.5s infinite;
+}
+
+.youtube-player {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px #d88ba855;
+}
+
+.youtube-player iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.music-caption,
+.music-note {
+  color: #b66c8b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.welcome-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 192, 220, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: welcomeFade 0.8s ease;
+}
+
+.welcome-box {
+  background: white;
+  padding: 30px 22px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 10px 35px #d98caf55;
+}
+
+.welcome-heart {
+  font-size: 55px;
+  animation: heartBeat 1s infinite;
+}
+
+.welcome-box h2 {
+  color: #e66b9d;
+}
+
+.welcome-box p {
+  color: #a65b7d;
+  line-height: 1.7;
+}
+
+.welcome-box button {
+  background: #f28db5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+@keyframes welcomeFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes heartBeat {
+  50% { transform: scale(1.2); }
+}
+
+#typingMessage {
+  min-height: 65px;
+  line-height: 1.8;
+  color: #d45d91;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 22px;
+  pointer-events: none;
+  z-index: 10000;
+  animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.letter-card {
+  background: #fff0f6;
+  border-radius: 25px;
+  padding: 25px 15px;
+  margin: 25px auto;
+  text-align: center;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.letter-card h2 {
+  color: #df6c9e;
+}
+
+.envelope {
+  position: relative;
+  width: 270px;
+  height: 180px;
+  margin: 65px auto 25px;
+  background: #f6a8c6;
+  border-radius: 8px;
+  perspective: 800px;
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #f6a8c6;
+  z-index: 1;
+}
+
+.envelope-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f9c2d8;
+  clip-path: polygon(0 0, 100% 0, 50% 65%);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e98bb2;
+  clip-path: polygon(0 0, 100% 0, 50% 55%);
+  transform-origin: top;
+  transition: transform 0.8s ease;
+  z-index: 4;
+}
+
+.letter-paper {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  width: 90%;
+  height: 80%;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  background: white;
+  border-radius: 8px;
+  color: #b85c83;
+  font-size: 12px;
+  opacity: 0;
+  overflow-y: auto;
+  transition: all 0.8s ease;
+  z-index: 2;
+}
+
+.letter-paper h3 {
+  font-size: 15px;
+  color: #e66b9d;
+}
+
+.letter-sign {
+  font-weight: bold;
+}
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.envelope.open .letter-paper {
+  opacity: 1;
+  transform: translateY(-115px);
+  height: 250px;
+  z-index: 5;
+}
+
+.letter-card button {
+  background: #ee8db5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+  .envelope {
+    width: 240px;
+  }
+}
+
+.love-game {
+  background: linear-gradient(135deg, #ffe4ef, #fff5f8);
+  padding: 30px 15px;
+  margin: 25px auto;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.love-game h2 {
+  color: #df6b9e;
+}
+
+.love-game h3 {
+  color: #b85c83;
+  font-size: 23px;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+  min-height: 65px;
+}
+
+.game-buttons button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.yes-button {
+  background: #ed78a8;
+}
+
+.no-button {
+  background: #aaa;
+  transition: all 0.25s ease;
+}
+
+#gameResult {
+  color: #df5792;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+.game-heart {
+  position: fixed;
+  bottom: -30px;
+  z-index: 10001;
+  pointer-events: none;
+  animation: gameHeartFloat 3s ease-out forwards;
+}
+
+@keyframes gameHeartFloat {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+.gift-section {
+  background: linear-gradient(135deg, #fff0f6, #ffe0ec);
+  border-radius: 25px;
+  padding: 30px 15px;
+  margin: 25px auto;
+  text-align: center;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.gift-section h2 {
+  color: #dc6598;
+}
+
+.gift-section p {
+  color: #a65b7d;
+}
+
+.gift-container {
+  position: relative;
+  width: 170px;
+  height: 150px;
+  margin: 45px auto 15px;
+  cursor: pointer;
+}
+
+.gift-box {
+  position: absolute;
+  bottom: 0;
+  width: 170px;
+  height: 105px;
+  background: #f28db5;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px #d9799d55;
+}
+
+.gift-ribbon {
+  position: absolute;
+  left: 68px;
+  width: 34px;
+  height: 100%;
+  background: #fff0a8;
+}
+
+.gift-lid {
+  position: absolute;
+  top: 20px;
+  left: -8px;
+  width: 186px;
+  height: 35px;
+  background: #e96f9f;
+  border-radius: 7px;
+  z-index: 3;
+  transition: transform 0.8s ease;
+}
+
+.gift-lid-ribbon {
+  width: 34px;
+  height: 100%;
+  background: #fff0a8;
+  margin: auto;
+}
+
+.gift-bow {
+  position: absolute;
+  top: -38px;
+  left: 55px;
+  font-size: 55px;
+  z-index: 4;
+}
+
+.gift-container.open .gift-lid {
+  transform: translate(35px, -65px) rotate(25deg);
+}
+
+.gift-message {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  padding: 20px 15px;
+  margin: 25px auto;
+  color: #c45e89;
+  line-height: 1.9;
+  animation: giftAppear 1s ease;
+}
+
+.gift-message h3 {
+  color: #e66b9d;
+}
+
+.gift-message.show {
+  display: block;
+}
+
+.gift-big-heart {
+  font-size: 45px;
+  animation: heartBeat 1s infinite;
+}
+
+@keyframes giftAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* MY LOVE PHOTO ALBUM */
+
+.album-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 25px 15px;
+  background: #fff0f6;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.album-section h2 {
+  color: #df6b9e;
+}
+
+.album-section > p {
+  color: #a65b7d;
+}
+
+/* จัดรูปภาพ 2 คอลัมน์ */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  align-items: stretch;
+}
+
+/* กรอบรูปทุกใบ */
+.album-item {
+  width: 100%;
+  min-width: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* รูปทุกใบเป็นสี่เหลี่ยมเท่ากัน */
+.album-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* คำบรรยายรูป */
+.album-item p {
+  color: #c45e89;
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 40px;
+  margin: 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* หน้าขยายรูป */
+.memory-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10002;
+  background: rgba(35, 15, 25, 0.94);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.memory-modal.show {
+  display: flex;
+}
+
+.memory-modal img {
+  max-width: 95%;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.memory-modal p {
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.memory-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* รองรับโทรศัพท์ */
+@media (max-width: 400px) {
+  .album-grid {
+    gap: 10px;
+  }
+
+  .album-item {
+    padding: 5px;
+  }
+
+  .album-item p {
+    font-size: 12px;
+  }
+}
+
+/* FORCE PHOTO ALBUM 2 COLUMNS */
+
+.album-section .album-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-auto-flow: row;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.album-section .album-item {
+  display: flex !important;
+  flex-direction: column;
+  width: 100% !important;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+.album-section .album-item img {
+  width: 100% !important;
+  aspect-ratio: 1 / 1;
+  height: auto !important;
+  object-fit: cover;
+}
+
+/* PHOTO SLIDESHOW BUTTONS */
+
+.photo-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #d85d91;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10003;
+}
+
+.photo-nav.prev {
+  left: 15px;
+}
+
+.photo-nav.next {
+  right: 15px;
+}
+
+.photo-nav:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+@media (max-width: 400px) {
+  .photo-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* ROMANTIC PHOTO EFFECT */
+
+.photo-heart {
+  position: fixed;
+  z-index: 10010;
+  pointer-events: none;
+  font-size: 25px;
+  animation: photoHeartFloat 1.8s ease-out forwards;
+}
+
+@keyframes photoHeartFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) scale(1.5) rotate(25deg);
+  }
+}
